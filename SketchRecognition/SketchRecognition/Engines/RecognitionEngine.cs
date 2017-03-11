@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SketchRecognition
+namespace SketchRecognition.Engines
 {
     public class RecognitionEngine
     {
