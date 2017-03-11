@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SketchRecognition
 {
-    public class Class1
+    public class RecognitionEngine
     {
     }
 }
