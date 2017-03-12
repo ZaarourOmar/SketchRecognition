@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SketchRecognition.Engines
+namespace SketchRecognition.Util
 {
-    public class RecognitionEngine:IRecognitionEngine
+    public class XmlFileHelper
     {
     }
 }

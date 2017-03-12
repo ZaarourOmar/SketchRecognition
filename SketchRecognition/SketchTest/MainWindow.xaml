@@ -1,0 +1,22 @@
+﻿<Window x:Class="SketchTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SketchTest"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <StackPanel>
+        <Grid IsEnabled="False" Name="addSampleGrid">
+            <Button HorizontalAlignment="Left" Width="Auto" Name="btnAddSample" Content="Add Sample"  Click="btnAddSample_Click"/>
+            <Button HorizontalAlignment="Center" Margin="-160,0,0,0" Width="Auto" Name="btnSaveModel" Content="Save Model"  Click="btnSaveModel_Click" Visibility="Collapsed"/>
+            <Button HorizontalAlignment="Center" Width="Auto" Name="btnTrainModel" Content="Train Model"  Click="btnTrainModel_Click" Visibility="Collapsed"/>
+
+            <ComboBox IsEditable="True" HorizontalAlignment="Right" Name="labels" Width="100" Height="30" VerticalAlignment="Top"/>
+
+        </Grid>
+
+        <InkCanvas Name="inkCanvas" Height="310" Background="Yellow" PreviewMouseDown="InkCanvas_PreviewMouseDown" PreviewMouseUp="InkCanvas_PreviewMouseUp"/>
+
+    </StackPanel>
+</Window>
