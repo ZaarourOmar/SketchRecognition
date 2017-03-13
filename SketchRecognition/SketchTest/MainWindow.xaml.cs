@@ -36,7 +36,7 @@ namespace SketchTest
         ISampleCollector sampleCollector = new SampleCollector();
         private void InkCanvas_PreviewMouseUp(object sender, MouseButtonEventArgs e)
         {
-            addSampleGrid.IsEnabled = true;
+            addSampleGrid.Visibility = Visibility.Visible;
         }
 
         private void btnAddSample_Click(object sender, RoutedEventArgs e)
@@ -54,7 +54,7 @@ namespace SketchTest
                 labelList.Add(labels.Text);
 
             inkCanvas.Strokes.Clear();
-            addSampleGrid.IsEnabled = false;
+            addSampleGrid.Visibility = Visibility.Collapsed;
             labels.ItemsSource = labelList;
 
 

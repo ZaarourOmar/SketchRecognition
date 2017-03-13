@@ -5,18 +5,39 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SketchTest"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <StackPanel>
-        <Grid IsEnabled="False" Name="addSampleGrid">
-            <Button HorizontalAlignment="Left" Width="Auto" Name="btnAddSample" Content="Add Sample"  Click="btnAddSample_Click"/>
-            <Button HorizontalAlignment="Center" Margin="-160,0,0,0" Width="Auto" Name="btnSaveModel" Content="Save Model"  Click="btnSaveModel_Click" Visibility="Collapsed"/>
-            <Button HorizontalAlignment="Center" Width="Auto" Name="btnTrainModel" Content="Train Model"  Click="btnTrainModel_Click" Visibility="Collapsed"/>
+        Title="MainWindow" Height="400" Width="600">
 
-            <ComboBox IsEditable="True" HorizontalAlignment="Right" Name="labels" Width="100" Height="30" VerticalAlignment="Top"/>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="70*"/>
+            <ColumnDefinition Width="30*"/>
+        </Grid.ColumnDefinitions>
 
+        <Grid Grid.Column="0">
+            <Border BorderThickness="2"  BorderBrush="#414141"/>
+            <InkCanvas  Name="inkCanvas"  Background="White" PreviewMouseDown="InkCanvas_PreviewMouseDown" PreviewMouseUp="InkCanvas_PreviewMouseUp"/>
+            <Grid Name="addSampleGrid" Background="{StaticResource SpanBlackMask}"  Visibility="Collapsed">
+
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200"  Background="#414141">
+                    <Label Content="New sample dialog" Foreground="White" FontSize="16"/>
+                    <Button  Width="Auto" Name="btnAddSample" Content="Add Sample"  Click="btnAddSample_Click" Margin="20"/>
+                    <ComboBox IsEditable="True"  Name="labels"  VerticalAlignment="Top" Margin="20,0,20,20"/>
+                </StackPanel>
+
+            </Grid>
         </Grid>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30*"/>
+                <RowDefinition Height="70*"/>
+            </Grid.RowDefinitions>
 
-        <InkCanvas Name="inkCanvas" Height="310" Background="Yellow" PreviewMouseDown="InkCanvas_PreviewMouseDown" PreviewMouseUp="InkCanvas_PreviewMouseUp"/>
+            <Grid Name="controls" Grid.Row="0">
+                <Button HorizontalAlignment="Center" Margin="-160,0,0,0" Width="Auto" Name="btnSaveModel" Content="Save Model"  Click="btnSaveModel_Click" Visibility="Collapsed"/>
+                <Button HorizontalAlignment="Center" Width="Auto" Name="btnTrainModel" Content="Train Model"  Click="btnTrainModel_Click" Visibility="Collapsed"/>
 
-    </StackPanel>
+            </Grid>
+            <ItemsControl Grid.Row="1" Background="Red"></ItemsControl>
+        </Grid>
+    </Grid>
 </Window>

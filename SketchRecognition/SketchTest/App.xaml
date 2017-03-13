@@ -4,6 +4,8 @@
              xmlns:local="clr-namespace:SketchTest"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <SolidColorBrush x:Key="SpanBlackMask" Color="#AA000000" />
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
